@@ -77,10 +77,10 @@ Aplikasi ini menggabungkan konten dari berbagai sumber populer menjadi satu temp
 
 ## 📱 Screenshots
 
-|                        Home & Trending                        |                           Detail Series                           |                           Video Player                           |
-| :-----------------------------------------------------------: | :---------------------------------------------------------------: | :--------------------------------------------------------------: |
-| ![Home](https://via.placeholder.com/250x500?text=Home+Screen) | ![Detail](https://via.placeholder.com/250x500?text=Detail+Screen) | ![Player](https://via.placeholder.com/250x500?text=Video+Player) |
-|                      _Tampilan Beranda_                       |                      _Halaman Detail & Cast_                      |                        _Streaming Player_                        |
+|                  Home & Trending                  |                    Detail Series                    |                    Video Player                    |
+| :-----------------------------------------------: | :-------------------------------------------------: | :------------------------------------------------: |
+| <img src="assets/images/home.jpeg" width="250" /> | <img src="assets/images/detail.jpeg" width="250" /> | <img src="assets/images/video.jpeg" width="250" /> |
+|                _Tampilan Beranda_                 |               _Halaman Detail & Cast_               |                 _Streaming Player_                 |
 
 _(Note: Screenshot di atas adalah placeholder. Tampilan asli mungkin berbeda pada versi terbaru)_
 
@@ -124,5 +124,5 @@ Proyek ini dilisensikan di bawah **MIT License**. Lihat file [LICENSE](LICENSE) 
 ---
 
 <center>
-Built with 💙 by <b>Irwanto (dobda.id)</b>
+Built with 💙 by <b>Irwan (dobda.id)</b>
 </center>
