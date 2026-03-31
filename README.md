@@ -11,6 +11,16 @@
 **QuickPlay** adalah aplikasi mobile (Android) yang dibangun dengan **Flutter**, mengonsumsi backend **api-drama** berbasis Node.js + Express yang mengagregasi konten dari **18 platform streaming** secara real-time. Semua data dinormalisasi ke format JSON yang seragam sebelum ditampilkan di aplikasi.
 
 ---
+## Preview
+
+- [Next.js](https://m.quickplay.my.id)
+- [Flutter Web](https://quickplay.my.id)
+- [Bot Telegram](https://t.me/quickplaystrbot)
+  
+  > Versi Web di Next.js Lebih kenceng Loading Awalnya Tapi Lebih Stabil Flutter Web
+  
+  > Jika Kamu Butuh Api Chat Saya di [Telegram](https://t.me/abcdefucek)
+---
 
 ## Architecture
 
