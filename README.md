@@ -56,33 +56,27 @@ graph LR
 
 ---
 
-## 21 Provider Terintegrasi
+## 🌐 21 Provider Terintegrasi
 
-| #   | Platform       | Slug         | Logo                                                | #   | Platform       | Slug         | Logo                                                |
-| --- | -------------- | ------------ | --------------------------------------------------- | --- | -------------- | ------------ | --------------------------------------------------- |
-| 1   | **Melolo**     | `melolo`     | ![](https://api-drama.dobda.id/logo/melolo.png)     | 12  | **StarShort**  | `starshort`  | ![](https://api-drama.dobda.id/logo/starshort.png)  |
-| 2   | **DramaBox**   | `dramabox`   | ![](https://api-drama.dobda.id/logo/dramabox.png)   | 13  | **FlexTV**     | `flextv`     | ![](https://api-drama.dobda.id/logo/flextv.png)     |
-| 3   | **ShortMax**   | `shortmax`   | ![](https://api-drama.dobda.id/logo/shortmax.png)   | 14  | **DramaRush**  | `dramarush`  | ![](https://api-drama.dobda.id/logo/dramarush.png)  |
-| 4   | **ReelShort**  | `reelshort`  | ![](https://api-drama.dobda.id/logo/reelshort.png)  | 15  | **RapidTV**    | `rapidtv`    | ![](https://api-drama.dobda.id/logo/rapidtv.png)    |
-| 5   | **NetShort**   | `netshort`   | ![](https://api-drama.dobda.id/logo/netshort.png)   | 16  | **Dramapops**  | `dramapops`  | ![](https://api-drama.dobda.id/logo/dramapops.png)  |
-| 6   | **MeloShort**  | `meloshort`  | ![](https://api-drama.dobda.id/logo/meloshort.png)  | 17  | **GoodShort**  | `goodshort`  | ![](https://api-drama.dobda.id/logo/goodshort.png)  |
-| 7   | **FlickReels** | `flickreels` | ![](https://api-drama.dobda.id/logo/flickreels.png) | 18  | **Reelife**    | `reelife`    | ![](https://api-drama.dobda.id/logo/reelife.png)    |
-| 8   | **FreeReels**  | `freereels`  | ![](https://api-drama.dobda.id/logo/freereels.png)  | 19  | **DramaNova**  | `dramanova`  | ![](https://api-drama.dobda.id/logo/dramanova.png)  |
-| 9   | **DramaWave**  | `dramawave`  | ![](https://api-drama.dobda.id/logo/dramawave.png)  | 20  | **StardustTV** | `stardusttv` | ![](https://api-drama.dobda.id/logo/stardusttv.png) |
-| 10  | **SnackShort** | `snackshort` | ![](https://api-drama.dobda.id/logo/snackshort.png) | 21  | **DramaBite**  | `dramabite`  | ![](https://api-drama.dobda.id/logo/dramabite.png)  |
-| 11  | **FunDrama**   | `fundrama`   | ![](https://api-drama.dobda.id/logo/fundrama.png)   |     |                |              |                                                     |
+|                                         Provider                                         |                                         Provider                                         |                                        Provider                                        |
+| :--------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------: |
+|     <img src="https://api-drama.dobda.id/logo/melolo.png" height="30"><br>**Melolo**     |   <img src="https://api-drama.dobda.id/logo/dramabox.png" height="30"><br>**DramaBox**   |  <img src="https://api-drama.dobda.id/logo/shortmax.png" height="30"><br>**ShortMax**  |
+|  <img src="https://api-drama.dobda.id/logo/reelshort.png" height="30"><br>**ReelShort**  |   <img src="https://api-drama.dobda.id/logo/netshort.png" height="30"><br>**NetShort**   | <img src="https://api-drama.dobda.id/logo/meloshort.png" height="30"><br>**MeloShort** |
+| <img src="https://api-drama.dobda.id/logo/flickreels.png" height="30"><br>**FlickReels** |  <img src="https://api-drama.dobda.id/logo/freereels.png" height="30"><br>**FreeReels**  | <img src="https://api-drama.dobda.id/logo/dramawave.png" height="30"><br>**DramaWave** |
+| <img src="https://api-drama.dobda.id/logo/snackshort.png" height="30"><br>**SnackShort** |   <img src="https://api-drama.dobda.id/logo/fundrama.png" height="30"><br>**FunDrama**   | <img src="https://api-drama.dobda.id/logo/starshort.png" height="30"><br>**StarShort** |
+|     <img src="https://api-drama.dobda.id/logo/flextv.png" height="30"><br>**FlexTV**     |  <img src="https://api-drama.dobda.id/logo/dramarush.png" height="30"><br>**DramaRush**  |   <img src="https://api-drama.dobda.id/logo/rapidtv.png" height="30"><br>**RapidTV**   |
+|  <img src="https://api-drama.dobda.id/logo/dramapops.png" height="30"><br>**Dramapops**  |  <img src="https://api-drama.dobda.id/logo/goodshort.png" height="30"><br>**GoodShort**  |   <img src="https://api-drama.dobda.id/logo/reelife.png" height="30"><br>**Reelife**   |
+|  <img src="https://api-drama.dobda.id/logo/dramanova.png" height="30"><br>**DramaNova**  | <img src="https://api-drama.dobda.id/logo/stardusttv.png" height="30"><br>**StardustTV** | <img src="https://api-drama.dobda.id/logo/dramabite.png" height="30"><br>**DramaBite** |
 
-## 13 Bahasa Dukungan
+## 🌍 13 Supported Languages
 
-| #   | Bahasa         | Kode | Flag | #   | Bahasa         | Kode | Flag |
-| --- | -------------- | ---- | ---- | --- | -------------- | ---- | ---- |
-| 1   | **Indonesian** | `id` | 🇮🇩    | 8   | **Spanish**    | `es` | 🇪🇸    |
-| 2   | **English**    | `en` | 🇬🇧    | 9   | **Vietnamese** | `vi` | 🇻🇳    |
-| 3   | **Japanese**   | `ja` | 🇯🇵    | 10  | **German**     | `de` | 🇩🇪    |
-| 4   | **Korean**     | `ko` | 🇰🇷    | 11  | **French**     | `fr` | 🇫🇷    |
-| 5   | **Thai**       | `th` | 🇹🇭    | 12  | **Italian**    | `it` | 🇮🇹    |
-| 6   | **Arabic**     | `ar` | 🇸🇦    | 13  | **Turkish**    | `tr` | 🇹🇷    |
-| 7   | **Portuguese** | `pt` | 🇧🇷    |     |                |      |      |
+|                  |               |                  |
+| :--------------- | :------------ | :--------------- |
+| 🇮🇩 **Indonesian** | 🇬🇧 **English** | 🇯🇵 **Japanese**   |
+| 🇰🇷 **Korean**     | 🇹🇭 **Thai**    | 🇸🇦 **Arabic**     |
+| 🇧🇷 **Portuguese** | 🇪🇸 **Spanish** | 🇻🇳 **Vietnamese** |
+| 🇩🇪 **German**     | 🇫🇷 **French**  | 🇮🇹 **Italian**    |
+| 🇹🇷 **Turkish**    |               |                  |
 
 ---
 
