@@ -48,15 +48,16 @@ graph LR
 
 ## ✨ Demo
 
-| Platform     | Link                                            |
-| ------------ | ----------------------------------------------- |
-| Next.js Web  | [m.quickplay.my.id](https://m.quickplay.my.id)  |
-| Flutter Web  | [quickplay.my.id](https://quickplay.my.id)      |
-| Telegram Bot | [quickplaystrbot](https://t.me/quickplaystrbot) |
+| Platform     | Link                                             |
+| ------------ | -----------------------------------------------  |
+| Next.js Web  | [m.quickplay.my.id](https://m.quickplay.my.id)   |
+| Flutter Web  | [quickplay.my.id](https://quickplay.my.id)       |
+| Telegram Bot | [quickplaystrbot](https://t.me/quickplaystrbot)  |
+| Api Drama    | [api-drama.dobda.id](https://api-drama.dobda.id) |
 
 ---
 
-## 🌐 21 Provider Terintegrasi
+## 🌐 22 Provider Terintegrasi
 
 |                                         Provider                                         |                                         Provider                                         |                                        Provider                                        |
 | :--------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------: |
@@ -67,6 +68,7 @@ graph LR
 |     <img src="https://api-drama.dobda.id/logo/flextv.png" height="30"><br>**FlexTV**     |  <img src="https://api-drama.dobda.id/logo/dramarush.png" height="30"><br>**DramaRush**  |   <img src="https://api-drama.dobda.id/logo/rapidtv.png" height="30"><br>**RapidTV**   |
 |  <img src="https://api-drama.dobda.id/logo/dramapops.png" height="30"><br>**Dramapops**  |  <img src="https://api-drama.dobda.id/logo/goodshort.png" height="30"><br>**GoodShort**  |   <img src="https://api-drama.dobda.id/logo/reelife.png" height="30"><br>**Reelife**   |
 |  <img src="https://api-drama.dobda.id/logo/dramanova.png" height="30"><br>**DramaNova**  | <img src="https://api-drama.dobda.id/logo/stardusttv.png" height="30"><br>**StardustTV** | <img src="https://api-drama.dobda.id/logo/dramabite.png" height="30"><br>**DramaBite** |
+|  <img src="https://api-drama.dobda.id/logo/sodareels.png" height="30"><br>**SodaReels**  |  |  |
 
 ## 🌍 13 Supported Languages
 
@@ -93,7 +95,7 @@ Mendukung **13 bahasa** dari seluruh dunia.
 - Auto-play next episode
 
 ### Progressive Search
-Pencarian ke **semua 21 provider secara paralel** — hasil muncul satu per satu.
+Pencarian ke **semua provider secara paralel** — hasil muncul satu per satu.
 
 ### Watch History & My List
 - Progress per-episode tersimpan lokal
@@ -190,6 +192,6 @@ Proyek ini dilisensikan di bawah **MIT License** — lihat file [LICENSE](LICENS
 
 <div align="center">
 
-Built with ☕ by **Irwan (dobda.id)**
+Built with ☕ by **Irwan@dobda.id**
 
 </div>
