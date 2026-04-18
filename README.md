@@ -57,7 +57,7 @@ graph LR
 
 ---
 
-## 🌐 22 Provider Terintegrasi
+## 🌐 24 Provider Terintegrasi
 
 |                                         Provider                                         |                                         Provider                                         |                                        Provider                                        |
 | :--------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------: |
@@ -68,7 +68,7 @@ graph LR
 |     <img src="https://api-drama.dobda.id/logo/flextv.png" height="30"><br>**FlexTV**     |  <img src="https://api-drama.dobda.id/logo/dramarush.png" height="30"><br>**DramaRush**  |   <img src="https://api-drama.dobda.id/logo/rapidtv.png" height="30"><br>**RapidTV**   |
 |  <img src="https://api-drama.dobda.id/logo/dramapops.png" height="30"><br>**Dramapops**  |  <img src="https://api-drama.dobda.id/logo/goodshort.png" height="30"><br>**GoodShort**  |   <img src="https://api-drama.dobda.id/logo/reelife.png" height="30"><br>**Reelife**   |
 |  <img src="https://api-drama.dobda.id/logo/dramanova.png" height="30"><br>**DramaNova**  | <img src="https://api-drama.dobda.id/logo/stardusttv.png" height="30"><br>**StardustTV** | <img src="https://api-drama.dobda.id/logo/dramabite.png" height="30"><br>**DramaBite** |
-|  <img src="https://api-drama.dobda.id/logo/sodareels.png" height="30"><br>**SodaReels**  |  |  |
+|  <img src="https://api-drama.dobda.id/logo/sodareels.png" height="30"><br>**SodaReels**  | <img src="https://api-drama.dobda.id/logo/bilitv.png" height="30"><br>**BiliTV** | <img src="https://api-drama.dobda.id/logo/idrama.png" height="30"><br>**iDrama** |
 
 ## 🌍 13 Supported Languages
 
@@ -90,7 +90,7 @@ Mendukung **13 bahasa** dari seluruh dunia.
 ### Smart Video Player
 - HLS (m3u8) & MP4 via `media_kit`
 - Subtitle WebVTT (auto-convert SRT→WebVTT)
-- Quality selection (720p, 1080p, auto)
+- Quality selection (240p, 360p, 480p, 540p, 720p, 1080p, auto)
 - Persistent fit settings
 - Auto-play next episode
 
