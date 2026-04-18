@@ -1,4 +1,4 @@
-# 🎬 QuickPlay - Modern Streaming App
+# 🎬 QuickPlay - Modern Short Drama Streaming App (Multi Sub)
 
 <div align="center">
 
@@ -10,38 +10,47 @@
 
 </div>
 
-> **Aplikasi streaming drama Asia all-in-one dengan tampilan modern, performa cepat, dan 21 provider konten dari seluruh dunia.**
+> **Aplikasi streaming drama China all-in-one dengan tampilan modern, performa cepat, dan 24 provider konten dari seluruh dunia.**
 
 ---
 
 ## 🔄 Cara Kerja Sistem
 
 ```mermaid
-graph LR
-    subgraph User
-        A[Android App] --> B[Flutter Web]
-        A --> C[Next.js Web]
-        A --> D[Telegram Bot]
+graph TD
+    %% Entry Point
+    Start([📱 User Request]) --> Auth{🛡️ Auth Check}
+    
+    %% Security Logic
+    Auth -- Invalid --> Deny[❌ 401 Unauthorized]
+    Auth -- Valid --> CacheCheck{⚡ Check Redis}
+
+    %% Cache Logic
+    CacheCheck -- HIT < 50ms --> Response([✅ Return JSON])
+    CacheCheck -- MISS --> ScraperNode[🔍 Scraper Node v3.0]
+
+    %% Scraping Logic
+    subgraph Scraping_Process [Engine Processing]
+        ScraperNode --> Proxy[🌐 Proxy Bypass]
+        Proxy --> Fetch[📡 Fetch Source]
+        Fetch --> Norm[🔄 Data Normalization]
     end
-    
-    subgraph Backend
-        E[api-drama Node.js] --> F[Express Server]
-        F --> G[Redis Cache]
-        F --> H[MySQL Database]
-        F --> I[Proxy Service]
-    end
-    
-    subgraph Scraping
-        J[21 Platform Providers] --> K[Axios + Cheerio]
-        K --> L[Data Normalization]
-    end
-    
-    E --> J
-    I --> E
-    
-    style A fill:#02569B,color:#fff
-    style E fill:#339939,color:#fff
-    style J fill:#FF6B6B,color:#fff
+
+    %% Storage & Return
+    Norm --> SaveCache[💾 Save to Redis & MySQL]
+    SaveCache --> Response
+
+    %% External Sources
+    Fetch -.-> Sources[(📺 24+ Platforms)]
+    Sources -.->|Raw Data| Fetch
+
+    %% Styling
+    style Start fill:#02569B,color:#fff
+    style Response fill:#339939,color:#fff
+    style Auth fill:#f9a825,color:#000
+    style CacheCheck fill:#f9a825,color:#000
+    style Sources fill:#e53935,color:#fff
+    style Scraping_Process fill:#f5f5f5,stroke:#333,stroke-dasharray: 5 5
 ```
 
 ---
@@ -93,6 +102,8 @@ Mendukung **13 bahasa** dari seluruh dunia.
 - Quality selection (240p, 360p, 480p, 540p, 720p, 1080p, auto)
 - Persistent fit settings
 - Auto-play next episode
+
+> NOTE: Fitur download disediakan hanya untuk penggunaan pribadi (offline viewing) guna menghemat kuota. Pengguna dilarang keras menyebarluaskan kembali konten tersebut. QuickPlay tidak bertanggung jawab atas penyalahgunaan file hasil unduhan oleh pengguna.
 
 ### Progressive Search
 Pencarian ke **semua provider secara paralel** — hasil muncul satu per satu.
