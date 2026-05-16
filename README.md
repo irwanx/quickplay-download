@@ -1,6 +1,8 @@
-# 🎬 QuickPlay - Modern Streaming App
+# QuickPlay - Modern Short Drama Streaming App (Multi Sub)
 
 <div align="center">
+
+<img src="assets/images/logo.png" alt="QuickPlay Logo" width="100" />
 
 [![Platform](https://img.shields.io/badge/Platform-Android-green?style=for-the-badge&logo=android)](https://github.com/irwanx/quickplay-download/releases)
 [![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter)](https://flutter.dev)
@@ -10,79 +12,87 @@
 
 </div>
 
-> **Aplikasi streaming drama Asia all-in-one dengan tampilan modern, performa cepat, dan 21 provider konten dari seluruh dunia.**
+> **Aplikasi streaming drama China all-in-one dengan tampilan modern, performa cepat, dan 31 provider konten dari seluruh dunia.**
 
 ---
 
 ## 🔄 Cara Kerja Sistem
 
 ```mermaid
-graph LR
-    subgraph User
-        A[Android App] --> B[Flutter Web]
-        A --> C[Next.js Web]
-        A --> D[Telegram Bot]
+graph TD
+    %% Entry Point
+    Start([📱 User Request]) --> Auth{🛡️ Auth Check}
+    
+    %% Security Logic
+    Auth -- Invalid --> Deny[❌ 401 Unauthorized]
+    Auth -- Valid --> CacheCheck{⚡ Check Redis}
+
+    %% Cache Logic
+    CacheCheck -- HIT < 50ms --> Response([✅ Return JSON])
+    CacheCheck -- MISS --> ScraperNode[🔍 Scraper Node v3.0]
+
+    %% Scraping Logic
+    subgraph Scraping_Process [Engine Processing]
+        ScraperNode --> Proxy[🌐 Proxy Bypass]
+        Proxy --> Fetch[📡 Fetch Source]
+        Fetch --> Norm[🔄 Data Normalization]
     end
-    
-    subgraph Backend
-        E[api-drama Node.js] --> F[Express Server]
-        F --> G[Redis Cache]
-        F --> H[MySQL Database]
-        F --> I[Proxy Service]
-    end
-    
-    subgraph Scraping
-        J[21 Platform Providers] --> K[Axios + Cheerio]
-        K --> L[Data Normalization]
-    end
-    
-    E --> J
-    I --> E
-    
-    style A fill:#02569B,color:#fff
-    style E fill:#339939,color:#fff
-    style J fill:#FF6B6B,color:#fff
+
+    %% Storage & Return
+    Norm --> SaveCache[💾 Save to Redis & MySQL]
+    SaveCache --> Response
+
+    %% External Sources
+    Fetch -.-> Sources[(📺 31 Platforms)]
+    Sources -.->|Raw Data| Fetch
+
+    %% Styling
+    style Start fill:#02569B,color:#fff
+    style Response fill:#339939,color:#fff
+    style Auth fill:#f9a825,color:#000
+    style CacheCheck fill:#f9a825,color:#000
+    style Sources fill:#e53935,color:#fff
+    style Scraping_Process fill:#f5f5f5,stroke:#333,stroke-dasharray: 5 5
 ```
 
 ---
 
 ## ✨ Demo
 
-| Platform     | Link                                            |
-| ------------ | ----------------------------------------------- |
-| Next.js Web  | [m.quickplay.my.id](https://m.quickplay.my.id)  |
-| Flutter Web  | [quickplay.my.id](https://quickplay.my.id)      |
-| Telegram Bot | [quickplaystrbot](https://t.me/quickplaystrbot) |
+| Platform     | Link                                             |
+| ------------ | -----------------------------------------------  |
+| Next.js Web  | [m.quickplay.my.id](https://m.quickplay.my.id)   |
+| Flutter Web  | [quickplay.my.id](https://quickplay.my.id)       |
+| Telegram Bot | [quickplaystrbot](https://t.me/quickplaystrbot)  |
+| Api Drama    | [api-drama.dobda.id](https://api-drama.dobda.id) |
 
 ---
 
-## 21 Provider Terintegrasi
+## 🌐 31 Provider Terintegrasi
 
-| #   | Platform       | Slug         | Logo                                                | #   | Platform       | Slug         | Logo                                                |
-| --- | -------------- | ------------ | --------------------------------------------------- | --- | -------------- | ------------ | --------------------------------------------------- |
-| 1   | **Melolo**     | `melolo`     | ![](https://api-drama.dobda.id/logo/melolo.png)     | 12  | **StarShort**  | `starshort`  | ![](https://api-drama.dobda.id/logo/starshort.png)  |
-| 2   | **DramaBox**   | `dramabox`   | ![](https://api-drama.dobda.id/logo/dramabox.png)   | 13  | **FlexTV**     | `flextv`     | ![](https://api-drama.dobda.id/logo/flextv.png)     |
-| 3   | **ShortMax**   | `shortmax`   | ![](https://api-drama.dobda.id/logo/shortmax.png)   | 14  | **DramaRush**  | `dramarush`  | ![](https://api-drama.dobda.id/logo/dramarush.png)  |
-| 4   | **ReelShort**  | `reelshort`  | ![](https://api-drama.dobda.id/logo/reelshort.png)  | 15  | **RapidTV**    | `rapidtv`    | ![](https://api-drama.dobda.id/logo/rapidtv.png)    |
-| 5   | **NetShort**   | `netshort`   | ![](https://api-drama.dobda.id/logo/netshort.png)   | 16  | **Dramapops**  | `dramapops`  | ![](https://api-drama.dobda.id/logo/dramapops.png)  |
-| 6   | **MeloShort**  | `meloshort`  | ![](https://api-drama.dobda.id/logo/meloshort.png)  | 17  | **GoodShort**  | `goodshort`  | ![](https://api-drama.dobda.id/logo/goodshort.png)  |
-| 7   | **FlickReels** | `flickreels` | ![](https://api-drama.dobda.id/logo/flickreels.png) | 18  | **Reelife**    | `reelife`    | ![](https://api-drama.dobda.id/logo/reelife.png)    |
-| 8   | **FreeReels**  | `freereels`  | ![](https://api-drama.dobda.id/logo/freereels.png)  | 19  | **DramaNova**  | `dramanova`  | ![](https://api-drama.dobda.id/logo/dramanova.png)  |
-| 9   | **DramaWave**  | `dramawave`  | ![](https://api-drama.dobda.id/logo/dramawave.png)  | 20  | **StardustTV** | `stardusttv` | ![](https://api-drama.dobda.id/logo/stardusttv.png) |
-| 10  | **SnackShort** | `snackshort` | ![](https://api-drama.dobda.id/logo/snackshort.png) | 21  | **DramaBite**  | `dramabite`  | ![](https://api-drama.dobda.id/logo/dramabite.png)  |
-| 11  | **FunDrama**   | `fundrama`   | ![](https://api-drama.dobda.id/logo/fundrama.png)   |     |                |              |                                                     |
+|                                         Provider                                         |                                         Provider                                         |                                        Provider                                        |
+| :--------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------: |
+|     <img src="https://api-drama.dobda.id/logo/melolo.png" height="30"><br>**Melolo**     |   <img src="https://api-drama.dobda.id/logo/dramabox.png" height="30"><br>**DramaBox**   |  <img src="https://api-drama.dobda.id/logo/shortmax.png" height="30"><br>**ShortMax**  |
+|  <img src="https://api-drama.dobda.id/logo/reelshort.png" height="30"><br>**ReelShort**  |   <img src="https://api-drama.dobda.id/logo/netshort.png" height="30"><br>**NetShort**   | <img src="https://api-drama.dobda.id/logo/meloshort.png" height="30"><br>**MeloShort** |
+| <img src="https://api-drama.dobda.id/logo/flickreels.png" height="30"><br>**FlickReels** |  <img src="https://api-drama.dobda.id/logo/freereels.png" height="30"><br>**FreeReels**  | <img src="https://api-drama.dobda.id/logo/dramawave.png" height="30"><br>**DramaWave** |
+| <img src="https://api-drama.dobda.id/logo/snackshort.png" height="30"><br>**SnackShort** |   <img src="https://api-drama.dobda.id/logo/fundrama.png" height="30"><br>**FunDrama**   | <img src="https://api-drama.dobda.id/logo/starshort.png" height="30"><br>**StarShort** |
+|     <img src="https://api-drama.dobda.id/logo/flextv.png" height="30"><br>**FlexTV**     |  <img src="https://api-drama.dobda.id/logo/dramarush.png" height="30"><br>**DramaRush**  |   <img src="https://api-drama.dobda.id/logo/rapidtv.png" height="30"><br>**RapidTV**   |
+|  <img src="https://api-drama.dobda.id/logo/dramapops.png" height="30"><br>**Dramapops**  |  <img src="https://api-drama.dobda.id/logo/goodshort.png" height="30"><br>**GoodShort**  |   <img src="https://api-drama.dobda.id/logo/reelife.png" height="30"><br>**Reelife**   |
+|  <img src="https://api-drama.dobda.id/logo/dramanova.png" height="30"><br>**DramaNova**  | <img src="https://api-drama.dobda.id/logo/stardusttv.png" height="30"><br>**StardustTV** | <img src="https://api-drama.dobda.id/logo/dramabite.png" height="30"><br>**DramaBite** |
+|  <img src="https://api-drama.dobda.id/logo/sodareels.png" height="30"><br>**SodaReels**  | <img src="https://api-drama.dobda.id/logo/bilitv.png" height="30"><br>**BiliTV** | <img src="https://api-drama.dobda.id/logo/idrama.png" height="30"><br>**iDrama** |
+| <img src="https://api-drama.dobda.id/logo/pinedrama.png" height="30"><br>**PineDrama** | <img src="https://api-drama.dobda.id/logo/cubetv.png" height="30"><br>**CubeTV** | <img src="https://api-drama.dobda.id/logo/shortwave.png" height="30"><br>**Shortwave** |
+| <img src="https://api-drama.dobda.id/logo/reelala.png" height="30"><br>**Reelala** | <img src="https://api-drama.dobda.id/logo/shotshort.png" height="30"><br>**ShotShort** | <img src="https://api-drama.dobda.id/logo/microdrama.png" height="30"><br>**MicroDrama** |
+| <img src="https://api-drama.dobda.id/logo/radreels.png" height="30"><br>**RadReels** | | |
 
-## 13 Bahasa Dukungan
+## 🌍 13 Supported Languages
 
-| #   | Bahasa         | Kode | Flag | #   | Bahasa         | Kode | Flag |
-| --- | -------------- | ---- | ---- | --- | -------------- | ---- | ---- |
-| 1   | **Indonesian** | `id` | 🇮🇩    | 8   | **Spanish**    | `es` | 🇪🇸    |
-| 2   | **English**    | `en` | 🇬🇧    | 9   | **Vietnamese** | `vi` | 🇻🇳    |
-| 3   | **Japanese**   | `ja` | 🇯🇵    | 10  | **German**     | `de` | 🇩🇪    |
-| 4   | **Korean**     | `ko` | 🇰🇷    | 11  | **French**     | `fr` | 🇫🇷    |
-| 5   | **Thai**       | `th` | 🇹🇭    | 12  | **Italian**    | `it` | 🇮🇹    |
-| 6   | **Arabic**     | `ar` | 🇸🇦    | 13  | **Turkish**    | `tr` | 🇹🇷    |
-| 7   | **Portuguese** | `pt` | 🇧🇷    |     |                |      |      |
+|                  |               |                  |
+| :--------------- | :------------ | :--------------- |
+| 🇮🇩 **Indonesian** | 🇬🇧 **English** | 🇯🇵 **Japanese**   |
+| 🇰🇷 **Korean**     | 🇹🇭 **Thai**    | 🇸🇦 **Arabic**     |
+| 🇧🇷 **Portuguese** | 🇪🇸 **Spanish** | 🇻🇳 **Vietnamese** |
+| 🇩🇪 **German**     | 🇫🇷 **French**  | 🇮🇹 **Italian**    |
+| 🇹🇷 **Turkish**    |               |                  |
 
 ---
 
@@ -94,12 +104,14 @@ Mendukung **13 bahasa** dari seluruh dunia.
 ### Smart Video Player
 - HLS (m3u8) & MP4 via `media_kit`
 - Subtitle WebVTT (auto-convert SRT→WebVTT)
-- Quality selection (720p, 1080p, auto)
+- Quality selection (240p, 360p, 480p, 540p, 720p, 1080p, auto)
 - Persistent fit settings
 - Auto-play next episode
 
+> NOTE: Fitur download disediakan hanya untuk penggunaan pribadi (offline viewing) guna menghemat kuota. Pengguna dilarang keras menyebarluaskan kembali konten tersebut. QuickPlay tidak bertanggung jawab atas penyalahgunaan file hasil unduhan oleh pengguna.
+
 ### Progressive Search
-Pencarian ke **semua 21 provider secara paralel** — hasil muncul satu per satu.
+Pencarian ke **semua provider secara paralel** — hasil muncul satu per satu.
 
 ### Watch History & My List
 - Progress per-episode tersimpan lokal
@@ -165,6 +177,52 @@ Pencarian ke **semua 21 provider secara paralel** — hasil muncul satu per satu
 
 ---
 
+## 📋 Minimum Requirements
+
+| Requirement | Spec |
+|-------------|------|
+| **OS** | Android 6.0 (API 23) or later |
+| **RAM** | Minimal 3GB (recommended 4GB+) |
+| **Storage** | ~100MB free space |
+| **Internet** | Stable connection (WiFi/4G/5G) |
+| **Resolution** | 720p+ display recommended |
+
+---
+
+## ❓ FAQ
+
+<details>
+<summary>Apakah aplikasi ini gratis?</summary>
+Ya, QuickPlay 100% gratis untuk di-download dan digunakan. Tidak ada biaya langganan atau pembelian dalam aplikasi.
+</details>
+
+<details>
+<summary>Apakah saya perlu akun/langganan?</summary>
+Tidak perlu. Cukup download APK dan install langsung bisa streaming tanpa registrasi atau login.
+</details>
+
+<details>
+<summary>Kenapa video tidak bisa diputar?</summary>
+Coba ganti kualitas ke 480p/720p, refresh halaman, atau ganti provider drama lain. Pastikan koneksi stabil.
+</details>
+
+<details>
+<summary>Bagaimana cara mengganti bahasa?</summary>
+Settings → Bahasa → pilih bahasa (Indonesia, English, Japanese, Korean, Thai, Arabic, Portuguese, Spanish, Vietnamese, German, French, Italian, Turkish).
+</details>
+
+<details>
+<summary>Apakah bisa download video untuk offline?</summary>
+Bisa. Aplikasi menyediakan fitur download untuk menonton secara offline.
+</details>
+
+<details>
+<summary>Bagaimana cara melaporkan bug atau memberikan saran?</summary>
+Hubungi via Telegram: <a href="https://t.me/hplssmnct">@hplssmnct</a>
+</details>
+
+---
+
 ## ⚠️ Legal Disclaimer & DMCA Policy
 
 **QuickPlay** adalah proyek open source untuk **tujuan edukasi** dalam pengembangan aplikasi mobile dengan Flutter dan backend Node.js.
@@ -196,6 +254,6 @@ Proyek ini dilisensikan di bawah **MIT License** — lihat file [LICENSE](LICENS
 
 <div align="center">
 
-Built with ☕ by **Irwan (dobda.id)**
+Built with ☕ by **Irwan@dobda.id**
 
 </div>
