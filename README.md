@@ -68,21 +68,24 @@ graph TD
 
 ---
 
-## 🌐 31 Provider Terintegrasi
+## 🌐 40 Provider Terintegrasi
 
-|                                         Provider                                         |                                         Provider                                         |                                        Provider                                        |
-| :--------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------: |
-|     <img src="https://api.quickplay.my.id/logo/melolo.png" height="30"><br>**Melolo**     |   <img src="https://api.quickplay.my.id/logo/dramabox.png" height="30"><br>**DramaBox**   |  <img src="https://api.quickplay.my.id/logo/shortmax.png" height="30"><br>**ShortMax**  |
-|  <img src="https://api.quickplay.my.id/logo/reelshort.png" height="30"><br>**ReelShort**  |   <img src="https://api.quickplay.my.id/logo/netshort.png" height="30"><br>**NetShort**   | <img src="https://api.quickplay.my.id/logo/meloshort.png" height="30"><br>**MeloShort** |
-| <img src="https://api.quickplay.my.id/logo/flickreels.png" height="30"><br>**FlickReels** |  <img src="https://api.quickplay.my.id/logo/freereels.png" height="30"><br>**FreeReels**  | <img src="https://api.quickplay.my.id/logo/dramawave.png" height="30"><br>**DramaWave** |
-| <img src="https://api.quickplay.my.id/logo/snackshort.png" height="30"><br>**SnackShort** |   <img src="https://api.quickplay.my.id/logo/fundrama.png" height="30"><br>**FunDrama**   | <img src="https://api.quickplay.my.id/logo/starshort.png" height="30"><br>**StarShort** |
-|     <img src="https://api.quickplay.my.id/logo/flextv.png" height="30"><br>**FlexTV**     |  <img src="https://api.quickplay.my.id/logo/dramarush.png" height="30"><br>**DramaRush**  |   <img src="https://api.quickplay.my.id/logo/rapidtv.png" height="30"><br>**RapidTV**   |
-|  <img src="https:/api.quickplay.my.id/logo/dramapops.png" height="30"><br>**Dramapops**  |  <img src="https://api-drama.dobda.id/logo/goodshort.png" height="30"><br>**GoodShort**  |   <img src="https://api-drama.dobda.id/logo/reelife.png" height="30"><br>**Reelife**   |
-|  <img src="https://api-drama.dobda.id/logo/dramanova.png" height="30"><br>**DramaNova**  | <img src="https://api-drama.dobda.id/logo/stardusttv.png" height="30"><br>**StardustTV** | <img src="https://api-drama.dobda.id/logo/dramabite.png" height="30"><br>**DramaBite** |
-|  <img src="https://api-drama.dobda.id/logo/sodareels.png" height="30"><br>**SodaReels**  | <img src="https://api-drama.dobda.id/logo/bilitv.png" height="30"><br>**BiliTV** | <img src="https://api-drama.dobda.id/logo/idrama.png" height="30"><br>**iDrama** |
-| <img src="https://api-drama.dobda.id/logo/pinedrama.png" height="30"><br>**PineDrama** | <img src="https://api-drama.dobda.id/logo/cubetv.png" height="30"><br>**CubeTV** | <img src="https://api-drama.dobda.id/logo/shortwave.png" height="30"><br>**Shortwave** |
-| <img src="https://api-drama.dobda.id/logo/reelala.png" height="30"><br>**Reelala** | <img src="https://api-drama.dobda.id/logo/shotshort.png" height="30"><br>**ShotShort** | <img src="https://api-drama.dobda.id/logo/microdrama.png" height="30"><br>**MicroDrama** |
-| <img src="https://api-drama.dobda.id/logo/radreels.png" height="30"><br>**RadReels** | | |
+| Provider | Provider | Provider |
+| :---: | :---: | :---: |
+| <img src="https://api.quickplay.my.id/logo/melolo.png" height="30"><br>**Melolo** | <img src="https://api.quickplay.my.id/logo/pinedrama.png" height="30"><br>**PineDrama** | <img src="https://api.quickplay.my.id/logo/freereels.png" height="30"><br>**FreeReels** |
+| <img src="https://api.quickplay.my.id/logo/meloshort.png" height="30"><br>**MeloShort** | <img src="https://api.quickplay.my.id/logo/reelshort.png" height="30"><br>**ReelShort** | <img src="https://api.quickplay.my.id/logo/reelife.png" height="30"><br>**Reelife** |
+| <img src="https://api.quickplay.my.id/logo/dramawave.png" height="30"><br>**DramaWave** | <img src="https://api.quickplay.my.id/logo/stardusttv.png" height="30"><br>**StardustTV** | <img src="https://api.quickplay.my.id/logo/netshort.png" height="30"><br>**NetShort** |
+| <img src="https://api.quickplay.my.id/logo/goodshort.png" height="30"><br>**GoodShort** | <img src="https://api.quickplay.my.id/logo/shortmax.png" height="30"><br>**ShortMax** | <img src="https://api.quickplay.my.id/logo/flickreels.png" height="30"><br>**FlickReels** |
+| <img src="https://api.quickplay.my.id/logo/flextv.png" height="30"><br>**FlexTV** | <img src="https://api.quickplay.my.id/logo/dramarush.png" height="30"><br>**DramaRush** | <img src="https://api.quickplay.my.id/logo/rapidtv.png" height="30"><br>**RapidTV** |
+| <img src="https://api.quickplay.my.id/logo/dramanova.png" height="30"><br>**DramaNova** | <img src="https://api.quickplay.my.id/logo/fundrama.png" height="30"><br>**FunDrama** | <img src="https://api.quickplay.my.id/logo/starshort.png" height="30"><br>**StarShort** |
+| <img src="https://api.quickplay.my.id/logo/dramapops.png" height="30"><br>**Dramapops** | <img src="https://api.quickplay.my.id/logo/snackshort.png" height="30"><br>**SnackShort** | <img src="https://api.quickplay.my.id/logo/dramabite.png" height="30"><br>**DramaBite** |
+| <img src="https://api.quickplay.my.id/logo/sodareels.png" height="30"><br>**SodaReels** | <img src="https://api.quickplay.my.id/logo/bilitv.png" height="30"><br>**BiliTV** | <img src="https://api.quickplay.my.id/logo/idrama.png" height="30"><br>**iDrama** |
+| <img src="https://api.quickplay.my.id/logo/cubetv.png" height="30"><br>**CubeTV** | <img src="https://api.quickplay.my.id/logo/shortwave.png" height="30"><br>**Shortwave** | <img src="https://api.quickplay.my.id/logo/reelala.png" height="30"><br>**Reelala** |
+| <img src="https://api.quickplay.my.id/logo/shotshort.png" height="30"><br>**ShotShort** | <img src="https://api.quickplay.my.id/logo/microdrama.png" height="30"><br>**MicroDrama** | <img src="https://api.quickplay.my.id/logo/radreels.png" height="30"><br>**RadReels** |
+| <img src="https://api.quickplay.my.id/logo/sereal.png" height="30"><br>**Sereal** | <img src="https://api.quickplay.my.id/logo/cashdrama.png" height="30"><br>**CashDrama** | <img src="https://api.quickplay.my.id/logo/flickshort.png" height="30"><br>**FlickShort** |
+| <img src="https://api.quickplay.my.id/logo/dotdrama.png" height="30"><br>**DotDrama** | <img src="https://api.quickplay.my.id/logo/dramabox.png" height="30"><br>**DramaBox** | <img src="https://api.quickplay.my.id/logo/moboreels.png" height="30"><br>**MoboReels** |
+| <img src="https://api.quickplay.my.id/logo/sarostv.png" height="30"><br>**SarosTV** | <img src="https://api.quickplay.my.id/logo/vigloo.png" height="30"><br>**Vigloo** | <img src="https://api.quickplay.my.id/logo/velolo.png" height="30"><br>**Velolo** |
+| <img src="https://api.quickplay.my.id/logo/shortbox.png" height="30"><br>**ShortBox** | | |
 
 ## 🌍 13 Supported Languages
 
