@@ -64,7 +64,7 @@ graph TD
 | Next.js Web  | [m.quickplay.my.id](https://m.quickplay.my.id)   |
 | Flutter Web  | [quickplay.my.id](https://quickplay.my.id)       |
 | Telegram Bot | [quickplaystrbot](https://t.me/quickplaystrbot)  |
-| Api Drama    | [api.quickplay.id](https://api.quickplay.id) |
+| Api Drama    | [api-drama.dobda.id](https://api-drama.dobda.id) |
 
 ---
 
