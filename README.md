@@ -12,7 +12,7 @@
 
 </div>
 
-> **Aplikasi streaming drama China all-in-one dengan tampilan modern, performa cepat, dan 31 provider konten dari seluruh dunia.**
+> **Aplikasi streaming drama pendek all-in-one dengan tampilan modern, performa cepat, dan 40+ provider konten dari seluruh dunia.**
 
 ---
 
@@ -43,7 +43,7 @@ graph TD
     SaveCache --> Response
 
     %% External Sources
-    Fetch -.-> Sources[(📺 31 Platforms)]
+    Fetch -.-> Sources[(📺 40+ Platforms)]
     Sources -.->|Raw Data| Fetch
 
     %% Styling
@@ -68,7 +68,7 @@ graph TD
 
 ---
 
-## 🌐 40 Provider Terintegrasi
+## 🌐 40+ Provider Terintegrasi
 
 | Provider | Provider | Provider |
 | :---: | :---: | :---: |
@@ -85,7 +85,8 @@ graph TD
 | <img src="https://api.quickplay.my.id/logo/sereal.png" height="30"><br>**Sereal** | <img src="https://api.quickplay.my.id/logo/cashdrama.png" height="30"><br>**CashDrama** | <img src="https://api.quickplay.my.id/logo/flickshort.png" height="30"><br>**FlickShort** |
 | <img src="https://api.quickplay.my.id/logo/dotdrama.png" height="30"><br>**DotDrama** | <img src="https://api.quickplay.my.id/logo/dramabox.png" height="30"><br>**DramaBox** | <img src="https://api.quickplay.my.id/logo/moboreels.png" height="30"><br>**MoboReels** |
 | <img src="https://api.quickplay.my.id/logo/sarostv.png" height="30"><br>**SarosTV** | <img src="https://api.quickplay.my.id/logo/vigloo.png" height="30"><br>**Vigloo** | <img src="https://api.quickplay.my.id/logo/velolo.png" height="30"><br>**Velolo** |
-| <img src="https://api.quickplay.my.id/logo/shortbox.png" height="30"><br>**ShortBox** | | |
+| <img src="https://api.quickplay.my.id/logo/shortbox.png" height="30"><br>**ShortBox** | <img src="https://api.quickplay.my.id/logo/wetv.png" height="30"><br>**WeTV** | <img src="https://api.quickplay.my.id/logo/luminareels.png" height="30"><br>**LuminaReels** |
+| <img src="https://api.quickplay.my.id/logo/bstation.png" height="30"><br>**BStation** | | |
 
 ## 🌍 13 Supported Languages
 
