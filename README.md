@@ -8,7 +8,7 @@
 [![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter)](https://flutter.dev)
 [![Node.js](https://img.shields.io/badge/Node.js-339939?style=for-the-badge&logo=nodedotjs)](https://nodejs.org/)
 [![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
-[![Version](https://img.shields.io/badge/Version-v1.1.8-orange?style=for-the-badge)](https://github.com/irwanx/quickplay-download/releases)
+[![Version](https://img.shields.io/badge/Version-v1.2.0-orange?style=for-the-badge)](https://github.com/irwanx/quickplay-download/releases)
 
 </div>
 
@@ -20,39 +20,19 @@
 
 ```mermaid
 graph TD
-    %% Entry Point
-    Start([📱 User Request]) --> Auth{🛡️ Auth Check}
-    
-    %% Security Logic
+    Start([📱 Flutter App]) --> Auth{🔐 HMAC\nValid?}
     Auth -- Invalid --> Deny[❌ 401 Unauthorized]
-    Auth -- Valid --> CacheCheck{⚡ Check Redis}
+    Auth -- Valid --> Redis{⚡ Redis Cache}
 
-    %% Cache Logic
-    CacheCheck -- HIT < 50ms --> Response([✅ Return JSON])
-    CacheCheck -- MISS --> ScraperNode[🔍 Scraper Node v3.0]
+    Redis -- HIT --> ResJSON([✅ Return JSON])
+    Redis -- MISS --> Fetch[📡 Fetch dari\n40+ Platform]
+    Fetch --> Save[💾 Simpan Redis\n+ MySQL]
+    Save --> ResJSON
 
-    %% Scraping Logic
-    subgraph Scraping_Process [Engine Processing]
-        ScraperNode --> Proxy[🌐 Proxy Bypass]
-        Proxy --> Fetch[📡 Fetch Source]
-        Fetch --> Norm[🔄 Data Normalization]
-    end
-
-    %% Storage & Return
-    Norm --> SaveCache[💾 Save to Redis & MySQL]
-    SaveCache --> Response
-
-    %% External Sources
-    Fetch -.-> Sources[(📺 40+ Platforms)]
-    Sources -.->|Raw Data| Fetch
-
-    %% Styling
-    style Start fill:#02569B,color:#fff
-    style Response fill:#339939,color:#fff
-    style Auth fill:#f9a825,color:#000
-    style CacheCheck fill:#f9a825,color:#000
-    style Sources fill:#e53935,color:#fff
-    style Scraping_Process fill:#f5f5f5,stroke:#333,stroke-dasharray: 5 5
+    style Start fill:transparent,stroke:#02569B,stroke-width:2px,color:#02569B
+    style ResJSON fill:transparent,stroke:#339939,stroke-width:2px,color:#339939
+    style Deny fill:transparent,stroke:#E53935,stroke-width:2px,color:#E53935
+    style Fetch fill:transparent,stroke:#7B1FA2,stroke-width:2px,color:#7B1FA2
 ```
 
 ---
@@ -72,7 +52,7 @@ graph TD
 
 | Provider | Provider | Provider |
 | :---: | :---: | :---: |
-| <img src="https://api.quickplay.my.id/logo/melolo.png" height="30"><br>**Melolo** | <img src="https://api.quickplay.my.id/logo/pinedrama.png" height="30"><br>**PineDrama** | <img src="https://api.quickplay.my.id/logo/freereels.png" height="30"><br>**FreeReels** |
+| <img src="https://api.quickplay.my.id/logo/melolo.png" height="30"><br>**Melolo** | <img src="https://api.quickplay.my.id/logo/wetv.png" height="30"><br>**WeTV** | <img src="https://api.quickplay.my.id/logo/freereels.png" height="30"><br>**FreeReels** |
 | <img src="https://api.quickplay.my.id/logo/meloshort.png" height="30"><br>**MeloShort** | <img src="https://api.quickplay.my.id/logo/reelshort.png" height="30"><br>**ReelShort** | <img src="https://api.quickplay.my.id/logo/reelife.png" height="30"><br>**Reelife** |
 | <img src="https://api.quickplay.my.id/logo/dramawave.png" height="30"><br>**DramaWave** | <img src="https://api.quickplay.my.id/logo/stardusttv.png" height="30"><br>**StardustTV** | <img src="https://api.quickplay.my.id/logo/netshort.png" height="30"><br>**NetShort** |
 | <img src="https://api.quickplay.my.id/logo/goodshort.png" height="30"><br>**GoodShort** | <img src="https://api.quickplay.my.id/logo/shortmax.png" height="30"><br>**ShortMax** | <img src="https://api.quickplay.my.id/logo/flickreels.png" height="30"><br>**FlickReels** |
@@ -85,8 +65,10 @@ graph TD
 | <img src="https://api.quickplay.my.id/logo/sereal.png" height="30"><br>**Sereal** | <img src="https://api.quickplay.my.id/logo/cashdrama.png" height="30"><br>**CashDrama** | <img src="https://api.quickplay.my.id/logo/flickshort.png" height="30"><br>**FlickShort** |
 | <img src="https://api.quickplay.my.id/logo/dotdrama.png" height="30"><br>**DotDrama** | <img src="https://api.quickplay.my.id/logo/dramabox.png" height="30"><br>**DramaBox** | <img src="https://api.quickplay.my.id/logo/moboreels.png" height="30"><br>**MoboReels** |
 | <img src="https://api.quickplay.my.id/logo/sarostv.png" height="30"><br>**SarosTV** | <img src="https://api.quickplay.my.id/logo/vigloo.png" height="30"><br>**Vigloo** | <img src="https://api.quickplay.my.id/logo/velolo.png" height="30"><br>**Velolo** |
-| <img src="https://api.quickplay.my.id/logo/shortbox.png" height="30"><br>**ShortBox** | <img src="https://api.quickplay.my.id/logo/wetv.png" height="30"><br>**WeTV** | <img src="https://api.quickplay.my.id/logo/luminareels.png" height="30"><br>**LuminaReels** |
-| <img src="https://api.quickplay.my.id/logo/bstation.png" height="30"><br>**BStation** | | |
+| <img src="https://api.quickplay.my.id/logo/shortbox.png" height="30"><br>**Shortbox** | <img src="https://api.quickplay.my.id/logo/pinedrama.png" height="30"><br>**PineDrama** | <img src="https://api.quickplay.my.id/logo/bstation.png" height="30"><br>**BStation** |
+| <img src="https://api.quickplay.my.id/logo/luminareels.png" height="30"><br>**LuminaReels** | <img src="https://api.quickplay.my.id/logo/dramabox.png" height="30"><br>**DramaBox Tempek** | <img src="https://api.quickplay.my.id/logo/shortsky.png" height="30"><br>**ShortSky** |
+| <img src="https://api.quickplay.my.id/logo/bonustv.png" height="30"><br>**BonusTV** | <img src="https://api.quickplay.my.id/logo/vibeshort.png" height="30"><br>**VibeShort** | <img src="https://api.quickplay.my.id/logo/dramaverse.png" height="30"><br>**DramaVerse** |
+| <img src="https://api.quickplay.my.id/logo/storyreel.png" height="30"><br>**StoryReel** | <img src="https://api.quickplay.my.id/logo/lupacine.png" height="30"><br>**Lupacine** | |
 
 ## 🌍 13 Supported Languages
 
@@ -176,7 +158,7 @@ Pencarian ke **semua provider secara paralel** — hasil muncul satu per satu.
 ### GitHub Releases
 1. Buka **[Releases](https://github.com/irwanx/quickplay-download/releases)**
 2. Pilih versi terbaru
-3. Unduh `.apk` (contoh: `QuickPlay-v1.1.8.apk`)
+3. Unduh `.apk` (contoh: `QuickPlay-v1.2.0.apk`)
 4. Install — izinkan **"Unknown Sources"**
 
 ---
