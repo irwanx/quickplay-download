@@ -211,8 +211,6 @@ Hubungi via Telegram: <a href="https://t.me/hplssmnct">@hplssmnct</a>
 
 ## ⚠️ Legal Disclaimer & DMCA Policy
 
-**QuickPlay** adalah proyek open source untuk **tujuan edukasi** dalam pengembangan aplikasi mobile dengan Flutter dan backend Node.js.
-
 ### Konten
 - Pengembang **tidak menghosting, menyimpan, atau mendistribusikan** media apapun
 - Aplikasi ini hanya sebagai interface/client yang mengambil konten yang tersedia secara publik di internet
@@ -229,7 +227,7 @@ Hubungi via Telegram: <a href="https://t.me/hplssmnct">@hplssmnct</a>
 - Kami akan segera menindaklanjuti permintaan removal yang valid
 
 ### Keamanan Data
-- Server melakukan **pembersihan data otomatis setiap 3 jam** via cron job
+- Server melakukan **pembersihan data otomatis setiap 1 jam** via cron job
 - Redis cache di-flush secara berkala, tidak ada media yang disimpan permanen
 - MySQL database di-truncate secara periodik
 
