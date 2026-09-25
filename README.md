@@ -8,7 +8,7 @@
 [![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter)](https://flutter.dev)
 [![Node.js](https://img.shields.io/badge/Node.js-339939?style=for-the-badge&logo=nodedotjs)](https://nodejs.org/)
 [![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
-[![Version](https://img.shields.io/badge/Version-v1.2.0-orange?style=for-the-badge)](https://github.com/irwanx/quickplay-download/releases)
+[![Version](https://img.shields.io/badge/Version-v1.2.9-orange?style=for-the-badge)](https://github.com/irwanx/quickplay-download/releases)
 
 </div>
 
